@@ -429,6 +429,10 @@ class Dicom2Spec(Interface):
         # -> convert highest id only
         # Note: This sorting is a q&d hack!
         # TODO: Sorting needs to become more sophisticated + include notion of :all
+
+        import pdb
+        pdb.set_trace()
+
         spec_series_list = sorted(spec_series_list,
                                   key=lambda x: get_specval(x, 'id')
                                                 if 'id' in x.keys() else 0)
